@@ -2,58 +2,100 @@
 <html lang="en">
 
 <head>
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      width: 100%;
+    }
+  </style>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sistema</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="sistema.css">
 </head>
 
 
 <body>
 
   <header>
-    <h2>Sistema Cozinha</h2>
+    <h1>Sistema Cozinha</h1>
     <button id="sair">Sair</button>
   </header>
 
   <main>
-    <section>
-      <h3>Lista de Cardapio</h3>
-      <table style="width:100%">
-        <tr>
-          <th>Turno</th>
-          <th>Data</th>
-          <th>Refeição</th>
-        </tr>
+   
+    <div>
+      <h2>Lista de Cardapio</h2>
+      <section>
+        <table style="width:100%">
+          <tr>
+            <th>Turno</th>
+            <th>Data</th>
+            <th>Refeição</th>
+            <th>Editar</th>
+            <th>Excluir</th>
+          </tr>
 
-        <tr>
-          <td>Manhã</td>
-          <td>22/09/2025</td>
-          <td>Almoço</td>
-        </tr>
+          <tr>
+            <td>Manhã</td>
+            <td>22/09/2025</td>
+            <td>Almoço</td>
+            <td>✏️</td>
+            <td>🗑️</td>
+          </tr>
 
-        <tr>
-          <td>Tarde</td>
-          <td>22/09/2025</td>
-          <td>Almoço</td>
-        </tr>
+          <tr>
+            <td>Tarde</td>
+            <td>22/09/2025</td>
+            <td>Almoço</td>
+            <td>✏️</td>
+            <td>🗑️</td>
+          </tr>
 
-        <tr>
-          <td>Noite</td>
-          <td>22/09/2025</td>
-          <td>Janta</td>
-        </tr>
+          <tr>
+            <td>Noite</td>
+            <td>22/09/2025</td>
+            <td>Janta</td>
+            <td>✏️</td>
+            <td>🗑️</td>
+          </tr>
 
-        <tr>
-          <td>Integral</td>
-          <td>22/09/2025</td>
-          <td>Lanche</td>
-        </tr>
+          <tr>
+            <td>Integral</td>
+            <td>22/09/2025</td>
+            <td>Lanche</td>
+            <td>✏️</td>
+            <td>🗑️</td>
+          </tr>
 
-      </table>
-    </section>
+        </table>
+      </section>
+
+      <section>
+        <h3>Fale conosco</h3>
+        <div class="fale-conosco">
+          <div>
+            <select type="escolhaOAssunto" id="escolhaOAssunto" name="escolhaOAssunto">
+              <option value="" selected disabled>Escolha o assunto</option>
+              <option value="elogio">Elogio</option>
+              <option value="critica">Crítica</option>
+              <option value="sugestao">Sugestão</option>
+              <option value="opiniao">Opinião</option>
+              <option value="outros">Outros</option>
+            </select><br>
+            <textarea name="" id=""></textarea><br>
+          </div>
+          <button id="enviar">Enviar</button>
+          </div>
+      </section>
+    </div>
+
 
     <aside>
+
       <h3>Cadastrar pratos</h3>
       <input type="date" id="data" name="data"><br>
       <br>
@@ -81,23 +123,12 @@
 
       <button id="cadastrar">Cadastrar</button>
 
-      <section>
-        <h2>Fale conosco</h2>
-        <select type="escolhaOAssunto" id="escolhaOAssunto" name="escolhaOAssunto">
-          <option value="" selected disabled>Escolha o assunto</option>
-          <option value="elogio">Elogio</option>
-          <option value="critica">Crítica</option>
-          <option value="sugestao">Sugestão</option>
-          <option value="opiniao">Opinião</option>
-          <option value="outros">Outros</option>
-        </select><br><br>
-
-        <textarea name="" id=""></textarea><br>
-        <button id="enviar">Enviar</button>
-      </section>
-      <br><br>
     </aside>
   </main>
+
+  <footer>
+    <p>Desenvolvido por: Pâmela</p>
+  </footer>
 </body>
 
 </html>
