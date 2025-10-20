@@ -15,21 +15,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sistema</title>
   <link rel="stylesheet" href="sistema.css">
+
+
 </head>
 
-
 <body>
-
   <header>
     <h1>Sistema Cozinha</h1>
-    <button id="sair">Sair</button>
+    <div>
+      <button id="cadastrar">Sair</button>
+    </div>
   </header>
 
+
   <main>
-   
+
+
     <div>
-      <h2>Lista de Cardapio</h2>
       <section>
+        <h2>Lista de Cardapio</h2>
         <table style="width:100%">
           <tr>
             <th>Turno</th>
@@ -38,7 +42,6 @@
             <th>Editar</th>
             <th>Excluir</th>
           </tr>
-
           <tr>
             <td>Manhã</td>
             <td>22/09/2025</td>
@@ -46,7 +49,6 @@
             <td>✏️</td>
             <td>🗑️</td>
           </tr>
-
           <tr>
             <td>Tarde</td>
             <td>22/09/2025</td>
@@ -54,7 +56,6 @@
             <td>✏️</td>
             <td>🗑️</td>
           </tr>
-
           <tr>
             <td>Noite</td>
             <td>22/09/2025</td>
@@ -62,7 +63,6 @@
             <td>✏️</td>
             <td>🗑️</td>
           </tr>
-
           <tr>
             <td>Integral</td>
             <td>22/09/2025</td>
@@ -70,64 +70,93 @@
             <td>✏️</td>
             <td>🗑️</td>
           </tr>
-
         </table>
+
       </section>
 
-      <section>
-        <h3>Fale conosco</h3>
+      <section class="fale">
+        <h2>FALE CONOSCO</h2>
         <div class="fale-conosco">
           <div>
-            <select type="escolhaOAssunto" id="escolhaOAssunto" name="escolhaOAssunto">
+            <select name="turnos" id="turnos">
               <option value="" selected disabled>Escolha o assunto</option>
               <option value="elogio">Elogio</option>
+              <option value="opiniao">Opinião</option>
               <option value="critica">Crítica</option>
               <option value="sugestao">Sugestão</option>
-              <option value="opiniao">Opinião</option>
-              <option value="outros">Outros</option>
             </select><br>
+
             <textarea name="" id=""></textarea><br>
           </div>
+
           <button id="enviar">Enviar</button>
-          </div>
+        </div>
+
+
       </section>
     </div>
-
-
     <aside>
 
-      <h3>Cadastrar pratos</h3>
-      <input type="date" id="data" name="data"><br>
-      <br>
+      <h2>CADASTRAR REFEIÇÕES</h2>
+      <h3>Cadastrar Prato</h3>
+      <form>
 
-      <select type="turno" id="turno" nome="Turno">
-        <option value="" selected disabled>Turno</option>
-        <option value="manha">Manhã</option>
-        <option value="tarde">Tarde</option>
-        <option value="integral">Integral</option>
-        <option value="noite">Noite</option>
-      </select>
 
-      <h3>Refeição</h3>
-      <input type="titulo" id="titulo" name="titulo" placeholder="Título"><br>
-      <br>
+        <fieldset>
+          <legend>Data</legend>
+          <input type="date" id="date" name="data" class="ocultar"><br>
+          <br>
+        </fieldset>
 
-      <input type="itens" id="itens" name="itens" placeholder="Itens"><br>
-      <br>
+        <fieldset>
+          <legend>Turno</legend>
+          <select name="turnos" id="turnos">
+            <option value="" selected disabled class="ocultar">Turno</option>
+            <option value="manha">Manhã</option>
+            <option value="tarde">Tarde</option>
+            <option value="noite">Noite</option>
+            <option value="integral">Integral</option>
+          </select><br>
+        </fieldset>
 
-      <input type="bebida" id="bebida" name="bebida" placeholder="Bebida"><br>
-      <br>
+        <h5>REFEIÇÃO</h5>
 
-      <button id="inserir">Inserir IMG</button><br>
-      <br>
+        <fieldset>
+          <legend>Titulo</legend>
+          <input type="text" id="refeição" name="refeição" class="ocultar"><br>
+          <br>
+        </fieldset>
 
-      <button id="cadastrar">Cadastrar</button>
+        <fieldset>
+          <legend>Itens</legend>
+        
+          <textarea  id="refeição" name="itens" placeholder="Itens" class="ocultar"></textarea>
+          <br>
+        </fieldset>
 
+        <fieldset>
+          <legend>Bebida</legend>
+          <input type="bebida" id="bebida" name="bebida" placeholder="Bebida" class="ocultar"><br>
+          <br>
+        </fieldset>
+        <fieldset class="button-inserir">
+          <legend>Inserir img</legend>
+          <button id="inserir">Inserir img</button>
+          <br>
+        </fieldset>
+        <button id="cadastrar">Cadastrar</button>
+
+
+      </form>
     </aside>
+
   </main>
 
+
+
   <footer>
-    <p>Desenvolvido por: Pâmela</p>
+    <p>Desenvolvido por: Pâmela Ladeira</p>
+
   </footer>
 </body>
 
